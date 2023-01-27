@@ -1,3 +1,6 @@
+import os
+os.system("cls")
+
 n = '12 - 4 * 2 + 6 / 3 +(10 - 6)/ 4 + (6 + 2) * 6 '
 
 m = []
@@ -12,7 +15,7 @@ for i in n:
         p.append(i)
     else:
         continue
-print (p)
+
 
 i = 0
 while i < int(len(p)-1):
@@ -24,7 +27,6 @@ while i < int(len(p)-1):
         i += 1
 m.append(p[-1])
 
-print(m)
 
 def calc(a, b, ch):
     if ch == '+':
@@ -48,7 +50,6 @@ while i < len(m)-1:
         while m[i] != ')':
 
             result2 = calc(int(m[i+1]), int(m[i + 3]), m[i + 2])
-            print (result2)
             p2.append(result2)
             count += 2
             i += 4
@@ -59,9 +60,6 @@ while i < len(m)-1:
         p2.append(m[i])
         i += 1
 p2.append(m[-1])
-
-print (f'ТУТ П2 = {p2}')
-
 
 result = int(p2[0])
 
